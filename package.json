@@ -1,0 +1,21 @@
+{
+	"private": true,
+	"scripts": {},
+	"devDependencies": {
+		"eslint": "^7.9.0",
+		"eslint-config-airbnb": "^18.2.0",
+		"eslint-import-resolver-node": "^0.3.4",
+		"eslint-plugin-import": "^2.22.0"
+	},
+	"dependencies": {
+		"koa": "^2.13.0",
+		"koa-compress": "^5.0.1",
+		"koa-helmet": "^5.2.0",
+		"koa-joi-rest": "^2.1.4",
+		"module-alias": "^2.2.2"
+	},
+	"_moduleAliases": {
+		"@": "./src",
+		"~": "./"
+	}
+}
