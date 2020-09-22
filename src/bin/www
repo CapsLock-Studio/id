@@ -1,3 +1,13 @@
 #!/usr/bin/env node
 
 require('module-alias')({ base: `${__dirname}/../../` });
+
+const createServer = require('@/libs/server');
+
+try {
+  const app = createServer();
+
+  app.listen(3000);
+} catch (error) {
+  //
+}
