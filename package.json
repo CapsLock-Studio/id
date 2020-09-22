@@ -4,6 +4,7 @@
 	"devDependencies": {
 		"eslint": "^7.9.0",
 		"eslint-config-airbnb": "^18.2.0",
+		"eslint-import-resolver-alias": "^1.1.2",
 		"eslint-import-resolver-node": "^0.3.4",
 		"eslint-plugin-import": "^2.22.0"
 	},

@@ -7,6 +7,7 @@ dependencies:
 devDependencies:
   eslint: 7.9.0
   eslint-config-airbnb: 18.2.0_abdf0c9d977be3d37bd469dd74184e57
+  eslint-import-resolver-alias: 1.1.2_eslint-plugin-import@2.22.0
   eslint-import-resolver-node: 0.3.4
   eslint-plugin-import: 2.22.0_eslint@7.9.0
 lockfileVersion: 5.1
@@ -585,6 +586,16 @@ packages:
       eslint-plugin-react-hooks: ^4 || ^3 || ^2.3.0 || ^1.7.0
     resolution:
       integrity: sha512-Fz4JIUKkrhO0du2cg5opdyPKQXOI2MvF8KUvN2710nJMT6jaRUpRE2swrJftAjVGL7T1otLM5ieo5RqS1v9Udg==
+  /eslint-import-resolver-alias/1.1.2_eslint-plugin-import@2.22.0:
+    dependencies:
+      eslint-plugin-import: 2.22.0_eslint@7.9.0
+    dev: true
+    engines:
+      node: '>= 4'
+    peerDependencies:
+      eslint-plugin-import: '>=1.4.0'
+    resolution:
+      integrity: sha512-WdviM1Eu834zsfjHtcGHtGfcu+F30Od3V7I9Fi57uhBEwPkjDcii7/yW8jAT+gOhn4P/vOxxNAXbFAKsrrc15w==
   /eslint-import-resolver-node/0.3.4:
     dependencies:
       debug: 2.6.9
@@ -1904,6 +1915,7 @@ packages:
 specifiers:
   eslint: ^7.9.0
   eslint-config-airbnb: ^18.2.0
+  eslint-import-resolver-alias: ^1.1.2
   eslint-import-resolver-node: ^0.3.4
   eslint-plugin-import: ^2.22.0
   koa: ^2.13.0
