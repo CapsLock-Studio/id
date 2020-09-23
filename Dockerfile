@@ -5,7 +5,7 @@ WORKDIR /app
 COPY . .
 
 RUN npm install --global pnpm@5 && \
-  pnpm install
+  pnpm install --prod
 
 EXPOSE 3000
 
