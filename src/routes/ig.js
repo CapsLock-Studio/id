@@ -6,7 +6,7 @@ const cheerio = require('cheerio');
 module.exports = {
   async show(ctx) {
     const alias = _.get(ctx, 'params.id');
-    const data = await axios.get(`https://instagram.com/${alias}`);
+    const data = await axios.get(`https://www.instagram.com/${alias}`);
     const $ = cheerio.load(data.data);
     const script = $('script:contains("window._sharedData = ")').html();
 
