@@ -6,7 +6,7 @@ const { URL } = require('url');
 module.exports = {
   async show(ctx) {
     const alias = _.get(ctx, 'params.id');
-    const data = await axios.get(`https://www.facebook.com/${alias}`);
+    const data = await axios.get(`https://www.facebook.com/${alias}`, { ...ctx.socks5 });
     const $ = cheerio.load(data.data);
     const ios = $('meta[property="al:ios:url"]').attr('content');
 

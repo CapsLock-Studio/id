@@ -1,5 +1,6 @@
 dependencies:
   axios: 0.20.0
+  axios-socks5-agent: 1.0.1
   cheerio: 1.0.0-rc.3
   koa: 2.13.0
   koa-compose: 4.1.0
@@ -8,6 +9,7 @@ dependencies:
   koa-joi-rest: 2.1.4
   lodash: 4.17.20
   module-alias: 2.2.2
+  node-cache: 5.1.2
 devDependencies:
   eslint: 7.9.0
   eslint-config-airbnb: 18.2.0_abdf0c9d977be3d37bd469dd74184e57
@@ -206,6 +208,13 @@ packages:
       node: '>= 7.6.0'
     resolution:
       integrity: sha512-u2TaZLepph/OHrJZgD/qu0vMFl17ahkTz4HJYbnaRLqJX6q1x8SMbFNV1nJnIYRbUr3jyHuTwaCN0hIKfMA8YA==
+  /axios-socks5-agent/1.0.1:
+    dependencies:
+      socks5-http-client: 1.0.4
+      socks5-https-client: 1.2.1
+    dev: false
+    resolution:
+      integrity: sha512-IhnPYjH7Z1zhcCLRp+pPMIEU7s8ILXyFn8u+8xUEh9J1GBIEycAodEQ2Cqa+IjDC0FvE8Yr3s12+Kgnq+iRLqQ==
   /axios/0.20.0:
     dependencies:
       follow-redirects: 1.13.0
@@ -1113,6 +1122,16 @@ packages:
   /inherits/2.0.4:
     resolution:
       integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
+  /ip-address/6.1.0:
+    dependencies:
+      jsbn: 1.1.0
+      lodash: 4.17.20
+      sprintf-js: 1.1.2
+    dev: false
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha512-u9YYtb1p2fWSbzpKmZ/b3QXWA+diRYPxc2c4y5lFB/MMk5WZ7wNZv8S3CFcIGVJ5XtlaCAl/FQy/D3eQ2XtdOA==
   /is-arrayish/0.2.1:
     dev: true
     resolution:
@@ -1211,6 +1230,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==
+  /jsbn/1.1.0:
+    dev: false
+    resolution:
+      integrity: sha1-sBMHyym2GKHtJux56RH4A8TaAEA=
   /json-schema-traverse/0.4.1:
     dev: true
     resolution:
@@ -1448,6 +1471,14 @@ packages:
       node: '>=4.0.0'
     resolution:
       integrity: sha512-0L9FvHG3nfnnmaEQPjT9xhfN4ISk0A8/2j4M37Np4mcDesJjHgEUfgPhdCyZuFI954tjokaIj/A3NdpFNdEh4Q==
+  /node-cache/5.1.2:
+    dependencies:
+      clone: 2.1.2
+    dev: false
+    engines:
+      node: '>= 8.0.0'
+    resolution:
+      integrity: sha512-t1QzWwnk4sjLWaQAS8CHgOJ+RAfmHpxFWmc36IWTiWHQfs0w5JDMBS1b1ZxQteo0vVVuWJvIUKHDkkeK7vIGCg==
   /normalize-package-data/2.5.0:
     dependencies:
       hosted-git-info: 2.8.8
@@ -1791,6 +1822,30 @@ packages:
     dev: false
     resolution:
       integrity: sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=
+  /socks5-client/1.2.8:
+    dependencies:
+      ip-address: 6.1.0
+    dev: false
+    engines:
+      node: '>= 6.4.0'
+    resolution:
+      integrity: sha512-js8WqQ/JjZS3IQwUxRwSThvXzcRIHE8sde8nE5q7nqxiFGb8EoHmNJ9SF2lXqn3ux6pUV3+InH7ng7mANK6XfA==
+  /socks5-http-client/1.0.4:
+    dependencies:
+      socks5-client: 1.2.8
+    dev: false
+    engines:
+      node: '>= 6.4.0'
+    resolution:
+      integrity: sha512-K16meYkltPtps6yDOqK9Mwlfz+pdD2kQQQ/TCO/gu2AImUmfO6nF2uXX1YWrPs4NCfClQNih19wqLXmuUcZCrA==
+  /socks5-https-client/1.2.1:
+    dependencies:
+      socks5-client: 1.2.8
+    dev: false
+    engines:
+      node: '>= 6.4.0'
+    resolution:
+      integrity: sha512-FbZ/X/2Xq3DAMhuRA4bnN0jy1QxaPTVPLFvyv6CEj0QDKSTdWp9yRxo1JhqXmWKhPQeJyUMajHJB2UjT43pFcw==
   /spdx-correct/3.1.1:
     dependencies:
       spdx-expression-parse: 3.0.1
@@ -1817,6 +1872,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
+  /sprintf-js/1.1.2:
+    dev: false
+    resolution:
+      integrity: sha512-VE0SOVEHCk7Qc8ulkWw3ntAzXuqf7S2lvwQaDLRnUeIEaKNQJzV6BwmLKhOqT61aGhfUMrXeaBk+oDGCzvhcug==
   /statuses/1.5.0:
     dev: false
     engines:
@@ -2046,6 +2105,7 @@ packages:
       integrity: sha512-faQrqNMzcPCHGVC2aaOINk13K+aaBDUPjGWl0teOXywElLjyVAB6Oe2jj62jHYtwsU49jXhScYbvPENK+6zAvQ==
 specifiers:
   axios: ^0.20.0
+  axios-socks5-agent: ^1.0.1
   cheerio: ^1.0.0-rc.3
   eslint: ^7.9.0
   eslint-config-airbnb: ^18.2.0
@@ -2059,3 +2119,4 @@ specifiers:
   koa-joi-rest: ^2.1.4
   lodash: ^4.17.20
   module-alias: ^2.2.2
+  node-cache: ^5.1.2
